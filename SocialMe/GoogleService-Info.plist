@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>242206805660-13ffmvrk6gn4a2t47hadbkc8sj6dihfm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.242206805660-13ffmvrk6gn4a2t47hadbkc8sj6dihfm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyD33nWtdnesiOgKn-8oQsY7mV1JSTheHiE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>242206805660</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lukeklepfer.SocialMe</string>
+	<key>PROJECT_ID</key>
+	<string>socialme-24e0c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>socialme-24e0c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:242206805660:ios:bcb2962a2b0baf79</string>
+	<key>DATABASE_URL</key>
+	<string>https://socialme-24e0c.firebaseio.com</string>
+</dict>
+</plist>

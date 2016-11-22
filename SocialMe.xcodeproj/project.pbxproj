@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172981DE4F53E00437C21 /* AppDelegate.swift */; };
-		ADE1729B1DE4F53E00437C21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1729A1DE4F53E00437C21 /* ViewController.swift */; };
+		ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1729A1DE4F53E00437C21 /* SignInVC.swift */; };
 		ADE1729E1DE4F53E00437C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE1729C1DE4F53E00437C21 /* Main.storyboard */; };
 		ADE172A01DE4F53F00437C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE1729F1DE4F53F00437C21 /* Assets.xcassets */; };
 		ADE172A31DE4F53F00437C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE172A11DE4F53F00437C21 /* LaunchScreen.storyboard */; };
+		ADE172AB1DE4F5D600437C21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADE172AA1DE4F5D600437C21 /* GoogleService-Info.plist */; };
+		D47DAC21153CB8B6A8A0B80A /* Pods_SocialMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3C64C41919818C9A7EEB19 /* Pods_SocialMe.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.release.xcconfig"; sourceTree = "<group>"; };
 		ADE172951DE4F53D00437C21 /* SocialMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE172981DE4F53E00437C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ADE1729A1DE4F53E00437C21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADE1729A1DE4F53E00437C21 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		ADE1729D1DE4F53E00437C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADE1729F1DE4F53F00437C21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADE172A21DE4F53F00437C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADE172A41DE4F53F00437C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADE172AA1DE4F5D600437C21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BC29D2066453F0150E21ABE1 /* Pods-SocialMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.debug.xcconfig"; sourceTree = "<group>"; };
+		FE3C64C41919818C9A7EEB19 /* Pods_SocialMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D47DAC21153CB8B6A8A0B80A /* Pods_SocialMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C9DBDB34DDB60FE50D55D7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC29D2066453F0150E21ABE1 /* Pods-SocialMe.debug.xcconfig */,
+				AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ADE1728C1DE4F53D00437C21 = {
 			isa = PBXGroup;
 			children = (
 				ADE172971DE4F53D00437C21 /* SocialMe */,
 				ADE172961DE4F53D00437C21 /* Products */,
+				9C9DBDB34DDB60FE50D55D7A /* Pods */,
+				B1E34765AC6286E2A53A3D85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +73,46 @@
 			isa = PBXGroup;
 			children = (
 				ADE172981DE4F53E00437C21 /* AppDelegate.swift */,
-				ADE1729A1DE4F53E00437C21 /* ViewController.swift */,
+				ADE172AE1DE4FBD100437C21 /* Controller */,
+				ADE172AD1DE4FBCC00437C21 /* View */,
+				ADE172AC1DE4FBC600437C21 /* Model */,
 				ADE1729C1DE4F53E00437C21 /* Main.storyboard */,
 				ADE1729F1DE4F53F00437C21 /* Assets.xcassets */,
 				ADE172A11DE4F53F00437C21 /* LaunchScreen.storyboard */,
 				ADE172A41DE4F53F00437C21 /* Info.plist */,
+				ADE172AA1DE4F5D600437C21 /* GoogleService-Info.plist */,
 			);
 			path = SocialMe;
+			sourceTree = "<group>";
+		};
+		ADE172AC1DE4FBC600437C21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ADE172AD1DE4FBCC00437C21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ADE172AE1DE4FBD100437C21 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ADE1729A1DE4F53E00437C21 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B1E34765AC6286E2A53A3D85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE3C64C41919818C9A7EEB19 /* Pods_SocialMe.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADE172A71DE4F53F00437C21 /* Build configuration list for PBXNativeTarget "SocialMe" */;
 			buildPhases = (
+				1EA5413CCA57EE3851C987BE /* [CP] Check Pods Manifest.lock */,
 				ADE172911DE4F53D00437C21 /* Sources */,
 				ADE172921DE4F53D00437C21 /* Frameworks */,
 				ADE172931DE4F53D00437C21 /* Resources */,
+				3A970FD4262F53DC95D82205 /* [CP] Embed Pods Frameworks */,
+				6C16F4FC7CA50F6D8C0AF0E6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,18 +180,67 @@
 			files = (
 				ADE172A31DE4F53F00437C21 /* LaunchScreen.storyboard in Resources */,
 				ADE172A01DE4F53F00437C21 /* Assets.xcassets in Resources */,
+				ADE172AB1DE4F5D600437C21 /* GoogleService-Info.plist in Resources */,
 				ADE1729E1DE4F53E00437C21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EA5413CCA57EE3851C987BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3A970FD4262F53DC95D82205 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C16F4FC7CA50F6D8C0AF0E6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADE172911DE4F53D00437C21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADE1729B1DE4F53E00437C21 /* ViewController.swift in Sources */,
+				ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */,
 				ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,12 +362,14 @@
 		};
 		ADE172A81DE4F53F00437C21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC29D2066453F0150E21ABE1 /* Pods-SocialMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = SocialMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.app.SocialMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.SocialMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -272,12 +377,14 @@
 		};
 		ADE172A91DE4F53F00437C21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = SocialMe/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.app.SocialMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukeklepfer.SocialMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +409,7 @@
 				ADE172A91DE4F53F00437C21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
