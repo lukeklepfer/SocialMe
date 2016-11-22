@@ -13,6 +13,10 @@
 		ADE172A01DE4F53F00437C21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADE1729F1DE4F53F00437C21 /* Assets.xcassets */; };
 		ADE172A31DE4F53F00437C21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE172A11DE4F53F00437C21 /* LaunchScreen.storyboard */; };
 		ADE172AB1DE4F5D600437C21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADE172AA1DE4F5D600437C21 /* GoogleService-Info.plist */; };
+		ADE172B01DE5074E00437C21 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172AF1DE5074E00437C21 /* CustomView.swift */; };
+		ADE172B21DE507D200437C21 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172B11DE507D200437C21 /* Constants.swift */; };
+		ADE172B51DE5097A00437C21 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172B41DE5097A00437C21 /* CustomButton.swift */; };
+		ADE172B71DE50AD200437C21 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172B61DE50AD200437C21 /* CustomTextField.swift */; };
 		D47DAC21153CB8B6A8A0B80A /* Pods_SocialMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE3C64C41919818C9A7EEB19 /* Pods_SocialMe.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		ADE172A21DE4F53F00437C21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADE172A41DE4F53F00437C21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADE172AA1DE4F5D600437C21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADE172AF1DE5074E00437C21 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		ADE172B11DE507D200437C21 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ADE172B41DE5097A00437C21 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		ADE172B61DE50AD200437C21 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		BC29D2066453F0150E21ABE1 /* Pods-SocialMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.debug.xcconfig"; sourceTree = "<group>"; };
 		FE3C64C41919818C9A7EEB19 /* Pods_SocialMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SocialMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				ADE172981DE4F53E00437C21 /* AppDelegate.swift */,
+				ADE172B31DE508B700437C21 /* Util */,
 				ADE172AE1DE4FBD100437C21 /* Controller */,
 				ADE172AD1DE4FBCC00437C21 /* View */,
 				ADE172AC1DE4FBC600437C21 /* Model */,
@@ -95,6 +104,9 @@
 		ADE172AD1DE4FBCC00437C21 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ADE172AF1DE5074E00437C21 /* CustomView.swift */,
+				ADE172B41DE5097A00437C21 /* CustomButton.swift */,
+				ADE172B61DE50AD200437C21 /* CustomTextField.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -105,6 +117,14 @@
 				ADE1729A1DE4F53E00437C21 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		ADE172B31DE508B700437C21 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				ADE172B11DE507D200437C21 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		B1E34765AC6286E2A53A3D85 /* Frameworks */ = {
@@ -240,8 +260,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADE172B01DE5074E00437C21 /* CustomView.swift in Sources */,
 				ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */,
+				ADE172B71DE50AD200437C21 /* CustomTextField.swift in Sources */,
 				ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */,
+				ADE172B21DE507D200437C21 /* Constants.swift in Sources */,
+				ADE172B51DE5097A00437C21 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
