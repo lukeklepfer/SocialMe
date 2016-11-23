@@ -22,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.release.xcconfig"; sourceTree = "<group>"; };
+		ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMe.entitlements; sourceTree = "<group>"; };
 		ADE172951DE4F53D00437C21 /* SocialMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE172981DE4F53E00437C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE1729A1DE4F53E00437C21 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -80,6 +81,7 @@
 		ADE172971DE4F53D00437C21 /* SocialMe */ = {
 			isa = PBXGroup;
 			children = (
+				ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */,
 				ADE172981DE4F53E00437C21 /* AppDelegate.swift */,
 				ADE172B31DE508B700437C21 /* Util */,
 				ADE172AE1DE4FBD100437C21 /* Controller */,
@@ -172,6 +174,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = HX5Z8E9QEF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -389,6 +396,7 @@
 			baseConfigurationReference = BC29D2066453F0150E21ABE1 /* Pods-SocialMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMe/SocialMe.entitlements;
 				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = SocialMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -404,6 +412,7 @@
 			baseConfigurationReference = AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialMe/SocialMe.entitlements;
 				DEVELOPMENT_TEAM = HX5Z8E9QEF;
 				INFOPLIST_FILE = SocialMe/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
