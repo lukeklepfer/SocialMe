@@ -22,26 +22,33 @@ class SignInVC: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    
     @IBAction func facebookBtn(_ sender: Any) {
         let facebookLogin = FBSDKLoginManager()
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("Facebook Auth Login: \(error)")
-            }else if result?.isCancelled == true {
-                //no error but user didnt allow it to open
-                print("User cancelled Facebook Auth")
-            }else{
-                print("Facebook Auth Succeded")
-                let cred = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                self.firebaseAuth(cred)
+                print("Unable to authenticate with Facebook - \(error)")
+            } else if result?.isCancelled == true {
+                print("User cancelled Facebook authentication")
+            } else {
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                print("Sucessfully Authenticated Facebook User")
+                self.firebaseAuth(credential)
             }
         }
     }
     
+    func firebaseAuth(_ credential: FIRAuthCredential) {
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                print("Unable to authenticate with Firebase: \(error)")
+            }else{
+                print("Authenticated with Firebase")
+            }
+        })
+    }
+    
     @IBAction func signinTapped(_ sender: Any) {
-        
         if let email = emailField.text, let pwd = passwordField.text {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
@@ -61,16 +68,5 @@ class SignInVC: UIViewController {
     }
     
     
-    func firebaseAuth(_ credential: FIRAuthCredential) {
-        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-            if error != nil {
-                print("Unable to authenticate with Firebase: \(error)")
-            }else{
-                print("Authenticated with Firebase")
-            }
-        })
-    }
-
-
 }
 
