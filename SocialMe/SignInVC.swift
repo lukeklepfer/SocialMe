@@ -20,6 +20,14 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: "ShowFeedVC", sender: nil)
+            //KeychainWrapper.standard.removeObject(forKey: KEY_UID)
+        }
     }
     
     @IBAction func facebookBtn(_ sender: Any) {
@@ -27,12 +35,12 @@ class SignInVC: UIViewController {
         
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
             if error != nil {
-                print("Unable to authenticate with Facebook - \(error)")
+                print("LUKE: Unable to authenticate with Facebook - \(error)")
             } else if result?.isCancelled == true {
-                print("User cancelled Facebook authentication")
+                print("LUKE: User cancelled Facebook authentication")
             } else {
                 let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
-                print("Sucessfully Authenticated Facebook User")
+                print("LUKE: Sucessfully Authenticated Facebook User")
                 self.firebaseAuth(credential)
             }
         }
@@ -41,9 +49,12 @@ class SignInVC: UIViewController {
     func firebaseAuth(_ credential: FIRAuthCredential) {
         FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
             if error != nil {
-                print("Unable to authenticate with Firebase: \(error)")
+                print("LUKE: Unable to authenticate with Firebase: \(error)")
             }else{
-                print("Authenticated with Firebase")
+                print("LUKE: Authenticated with Firebase")
+                if let user = user {
+                    self.completeSignin(id: user.uid)
+                }
             }
         })
     }
@@ -53,13 +64,19 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     //signed in!
-                    print("Email User Authenticated with Firebase")
+                    print("LUKE: Email User Authenticated with Firebase")
+                    if let user = user {
+                        self.completeSignin(id: user.uid)
+                    }
                 }else{
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil{
-                            print("Email User can not be created \(error.debugDescription)")
+                            print("LUKE: Email User can not be created \(error.debugDescription)")
                         }else{
-                            print("Email User Created")
+                            print("LUKE: Email User Created")
+                            if let user = user {
+                                self.completeSignin(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -67,6 +84,11 @@ class SignInVC: UIViewController {
         }
     }
     
+    func completeSignin(id: String){
+        KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        performSegue(withIdentifier: "ShowFeedVC", sender: nil)
+        print("LUKE: UID Saved to Keychain")
+    }
     
 }
 
