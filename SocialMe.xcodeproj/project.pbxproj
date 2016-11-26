@@ -10,6 +10,7 @@
 		ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */; };
 		ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */; };
 		ADC7CB7D1DE8F77B00073582 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */; };
+		ADC7CB7F1DE93A6300073582 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB7E1DE93A6300073582 /* PostCell.swift */; };
 		ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172981DE4F53E00437C21 /* AppDelegate.swift */; };
 		ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1729A1DE4F53E00437C21 /* SignInVC.swift */; };
 		ADE1729E1DE4F53E00437C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE1729C1DE4F53E00437C21 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 		ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		ADC7CB7E1DE93A6300073582 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		ADE172951DE4F53D00437C21 /* SocialMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE172981DE4F53E00437C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE1729A1DE4F53E00437C21 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -89,8 +91,6 @@
 			children = (
 				ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */,
 				ADE172981DE4F53E00437C21 /* AppDelegate.swift */,
-				ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */,
-				ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */,
 				ADE172B31DE508B700437C21 /* Util */,
 				ADE172AE1DE4FBD100437C21 /* Controller */,
 				ADE172AD1DE4FBCC00437C21 /* View */,
@@ -117,6 +117,7 @@
 				ADE172AF1DE5074E00437C21 /* CustomView.swift */,
 				ADE172B41DE5097A00437C21 /* CustomButton.swift */,
 				ADE172B61DE50AD200437C21 /* CustomTextField.swift */,
+				ADC7CB7E1DE93A6300073582 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -134,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				ADE172B11DE507D200437C21 /* Constants.swift */,
+				ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */,
+				ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */,
 				ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */,
 				ADE172B51DE5097A00437C21 /* CustomButton.swift in Sources */,
+				ADC7CB7F1DE93A6300073582 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
