@@ -27,7 +27,6 @@ class SignInVC: UIViewController {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
             print("LUKE: UID Found in Keychain")
             performSegue(withIdentifier: "ShowFeedVC", sender: nil)
-            //KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         }
     }
     
@@ -54,7 +53,8 @@ class SignInVC: UIViewController {
             }else{
                 print("LUKE: Authenticated with Firebase")
                 if let user = user {
-                    self.completeSignin(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignin(id: user.uid, userData: userData)
                 }
             }
         })
@@ -67,7 +67,8 @@ class SignInVC: UIViewController {
                     //signed in!
                     print("LUKE: Email User Authenticated with Firebase")
                     if let user = user {
-                        self.completeSignin(id: user.uid)
+                        let userData = ["provider": user.providerID]
+                        self.completeSignin(id: user.uid, userData: userData)
                     }
                 }else{
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -76,7 +77,8 @@ class SignInVC: UIViewController {
                         }else{
                             print("LUKE: Email User Created")
                             if let user = user {
-                                self.completeSignin(id: user.uid)
+                                let userData = ["provider": user.providerID]
+                                self.completeSignin(id: user.uid, userData: userData)
                             }
                         }
                     })
@@ -85,7 +87,9 @@ class SignInVC: UIViewController {
         }
     }
     
-    func completeSignin(id: String){
+    func completeSignin(id: String, userData: Dictionary<String,String>){
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        print("LUKE: \(id, userData)")
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
         performSegue(withIdentifier: "ShowFeedVC", sender: nil)
         print("LUKE: UID Saved to Keychain")

@@ -152,8 +152,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixe-s4-KKC" customClass="CustomView" customModule="SocialMe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="clA-U9-fUz">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sign-out" translatesAutoresizingMaskIntoConstraints="NO" id="clA-U9-fUz">
                                         <rect key="frame" x="8" y="15" width="50" height="50"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="ghd-2j-Rmj"/>
                                             <constraint firstAttribute="width" constant="50" id="hWz-8s-lts"/>
@@ -170,6 +171,7 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.73725490196078436" blue="0.83137254901960789" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="nGh-mH-3xe" firstAttribute="centerX" secondItem="Ixe-s4-KKC" secondAttribute="centerX" id="Iw2-6A-HRb"/>
                                     <constraint firstAttribute="bottom" secondItem="nGh-mH-3xe" secondAttribute="bottom" id="KXR-gl-sQZ"/>
@@ -178,6 +180,9 @@
                                     <constraint firstAttribute="height" constant="65" id="miG-xU-JMM"/>
                                     <constraint firstAttribute="bottom" secondItem="clA-U9-fUz" secondAttribute="bottom" id="r7j-J1-NeO"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="4x5-tj-to0" appends="YES" id="fam-Zh-O66"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGZ-84-N82" customClass="CustomView" customModule="SocialMe" customModuleProvider="target">
                                 <rect key="frame" x="8" y="73" width="359" height="65"/>
@@ -345,11 +350,17 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="jZz-P1-8h9" id="U9F-en-fY5"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ShowSignIn" id="Gm3-Pp-6xu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuO-U6-inC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="4x5-tj-to0">
+                    <connections>
+                        <action selector="tappedSignOut:" destination="uVi-6f-Kt9" id="czu-tE-9S7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="957.60000000000002" y="35.532233883058474"/>
+            <point key="canvasLocation" x="1188" y="36"/>
         </scene>
     </scenes>
     <resources>

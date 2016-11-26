@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1A848A1DEA36E60039D687 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A84891DEA36E60039D687 /* DataService.swift */; };
 		ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */; };
 		ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */; };
 		ADC7CB7D1DE8F77B00073582 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.release.xcconfig"; sourceTree = "<group>"; };
+		AD1A84891DEA36E60039D687 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMe.entitlements; sourceTree = "<group>"; };
 		ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AD1A84881DEA36C90039D687 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A84891DEA36E60039D687 /* DataService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		ADE1728C1DE4F53D00437C21 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +101,7 @@
 			children = (
 				ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */,
 				ADE172981DE4F53E00437C21 /* AppDelegate.swift */,
+				AD1A84881DEA36C90039D687 /* Services */,
 				ADE172B31DE508B700437C21 /* Util */,
 				ADE172AE1DE4FBD100437C21 /* Controller */,
 				ADE172AD1DE4FBCC00437C21 /* View */,
@@ -285,6 +296,7 @@
 				ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */,
 				ADE172B71DE50AD200437C21 /* CustomTextField.swift in Sources */,
 				ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */,
+				AD1A848A1DEA36E60039D687 /* DataService.swift in Sources */,
 				ADE172B21DE507D200437C21 /* Constants.swift in Sources */,
 				ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */,
 				ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */,
