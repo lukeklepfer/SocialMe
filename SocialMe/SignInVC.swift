@@ -25,6 +25,7 @@ class SignInVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            print("LUKE: UID Found in Keychain")
             performSegue(withIdentifier: "ShowFeedVC", sender: nil)
             //KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         }
