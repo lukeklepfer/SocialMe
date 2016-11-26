@@ -18,7 +18,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            print("LUKE: \(snapshot.value)")
         
+        
+        })
     }
     
     @IBAction func postBtnTapped(_ sender: Any) {
