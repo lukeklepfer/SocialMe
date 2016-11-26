@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */; };
+		ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */; };
+		ADC7CB7D1DE8F77B00073582 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */; };
 		ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE172981DE4F53E00437C21 /* AppDelegate.swift */; };
 		ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE1729A1DE4F53E00437C21 /* SignInVC.swift */; };
 		ADE1729E1DE4F53E00437C21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADE1729C1DE4F53E00437C21 /* Main.storyboard */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.release.xcconfig"; sourceTree = "<group>"; };
 		ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMe.entitlements; sourceTree = "<group>"; };
+		ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		ADE172951DE4F53D00437C21 /* SocialMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADE172981DE4F53E00437C21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADE1729A1DE4F53E00437C21 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -83,6 +89,8 @@
 			children = (
 				ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */,
 				ADE172981DE4F53E00437C21 /* AppDelegate.swift */,
+				ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */,
+				ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */,
 				ADE172B31DE508B700437C21 /* Util */,
 				ADE172AE1DE4FBD100437C21 /* Controller */,
 				ADE172AD1DE4FBCC00437C21 /* View */,
@@ -117,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				ADE1729A1DE4F53E00437C21 /* SignInVC.swift */,
+				ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -268,11 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC7CB7D1DE8F77B00073582 /* FeedVC.swift in Sources */,
 				ADE172B01DE5074E00437C21 /* CustomView.swift in Sources */,
 				ADE1729B1DE4F53E00437C21 /* SignInVC.swift in Sources */,
 				ADE172B71DE50AD200437C21 /* CustomTextField.swift in Sources */,
 				ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */,
 				ADE172B21DE507D200437C21 /* Constants.swift in Sources */,
+				ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */,
+				ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */,
 				ADE172B51DE5097A00437C21 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
