@@ -28,6 +28,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imgPicker.allowsEditing = true
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            self.posts = []
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for snap in snapshot {
                     //print("LUKE: \(snap)")
@@ -93,7 +94,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         captionTxtField.text = ""
         addImgView.image = #imageLiteral(resourceName: "add-image")
         tableView.reloadData()
-    }
+     }
     
     
     
@@ -121,11 +122,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             
             if let img = FeedVC.imgCache.object(forKey: post.imgUrl as NSString) {
                 cell.configureCell(post: post, img: img)
-                return cell
+                //return cell
             }else{
                 cell.configureCell(post: post)//default value is set
                 return cell
             }
+            return cell
         }else{
             return PostCell()
         }
