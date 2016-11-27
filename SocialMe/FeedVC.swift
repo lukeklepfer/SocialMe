@@ -13,7 +13,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addImgView: UIImageView!
-    
+    @IBOutlet weak var captionTxtField: CustomTextField!
     
     var imgPicker: UIImagePickerController!
     var posts = [Post]()
@@ -49,6 +49,38 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         }
         imgPicker.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func postBtnTapped(_ sender: Any) {
+        
+        guard let caption = captionTxtField.text, caption != "" else {
+            //not true
+            print("LUKE: Can not post with out a post caption")
+            return
+        }
+        guard let img = addImgView.image, img != #imageLiteral(resourceName: "add-image") else{
+            print("LUKE: Can not post without an image")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2){
+            let imgUid = NSUUID().uuidString
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpeg"
+            
+            DataService.ds.REF_STOR_POST_PICS.child(imgUid).put(imgData, metadata: metaData) { (metadata, error) in
+                if error != nil {
+                    print("LUKE: Unable to upload image to Firebase Storage")
+                }else{
+                    print("LUKE: Succesfully uploaded image to Firebase Storage")
+                    let downloadURL = metadata?.downloadURL()?.absoluteString //converts url to raw string
+                }
+            }
+        }
+    }
+    
+    
+    
+    
     
     @IBAction func addImageTapped(_ sender: Any) {
         present(imgPicker, animated: true, completion: nil)
