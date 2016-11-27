@@ -9,16 +9,22 @@
 import UIKit
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addImgView: UIImageView!
     
+    
+    var imgPicker: UIImagePickerController!
     var posts = [Post]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        imgPicker = UIImagePickerController()
+        imgPicker.delegate = self
+        imgPicker.allowsEditing = true
         
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
@@ -34,9 +40,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
           self.tableView.reloadData()
         })
     }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let img = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImgView.image = img
+        }else{
+            print("LUKE: A valid image was not selected")
+        }
+        imgPicker.dismiss(animated: true, completion: nil)
+    }
     
-    @IBAction func postBtnTapped(_ sender: Any) {
-        
+    @IBAction func addImageTapped(_ sender: Any) {
+        present(imgPicker, animated: true, completion: nil)
+        //if let img
     }
     
     
