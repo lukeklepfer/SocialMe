@@ -217,6 +217,9 @@
                                                     <constraint firstAttribute="height" constant="57" id="fAL-xx-08g"/>
                                                 </constraints>
                                                 <state key="normal" image="add-post"/>
+                                                <connections>
+                                                    <action selector="postBtnTapped:" destination="uVi-6f-Kt9" eventType="touchUpInside" id="6pb-Hw-pVc"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,6 +354,7 @@
                     </view>
                     <connections>
                         <outlet property="addImgView" destination="TDf-57-OyU" id="ivB-2b-DCt"/>
+                        <outlet property="captionTxtField" destination="cXq-Xh-F1q" id="K0t-Dr-EUR"/>
                         <outlet property="tableView" destination="jZz-P1-8h9" id="U9F-en-fY5"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ShowSignIn" id="Gm3-Pp-6xu"/>
                     </connections>
