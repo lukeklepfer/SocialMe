@@ -190,13 +190,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="yBc-df-Z5e">
                                         <rect key="frame" x="4" y="4" width="351" height="57"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-57-OyU">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-57-OyU">
                                                 <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
                                                 <color key="backgroundColor" red="0.90588235289999997" green="0.61807910460000004" blue="0.073337122680000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="94v-n7-RHQ"/>
                                                     <constraint firstAttribute="width" constant="57" id="ZtI-fx-quR"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="UFB-Hb-upc" appends="YES" id="tCB-Ld-jxU"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Post text" minimumFontSize="14" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cXq-Xh-F1q" customClass="CustomTextField" customModule="SocialMe" customModuleProvider="target">
                                                 <rect key="frame" x="62" y="0.0" width="227" height="57"/>
@@ -349,6 +353,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImgView" destination="TDf-57-OyU" id="ivB-2b-DCt"/>
                         <outlet property="tableView" destination="jZz-P1-8h9" id="U9F-en-fY5"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="ShowSignIn" id="Gm3-Pp-6xu"/>
                     </connections>
@@ -357,6 +362,11 @@
                 <tapGestureRecognizer id="4x5-tj-to0">
                     <connections>
                         <action selector="tappedSignOut:" destination="uVi-6f-Kt9" id="czu-tE-9S7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="UFB-Hb-upc">
+                    <connections>
+                        <action selector="addImageTapped:" destination="uVi-6f-Kt9" id="yQ7-Dg-f4L"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
