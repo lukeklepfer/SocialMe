@@ -61,7 +61,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
             print("LUKE: Can not post without an image")
             return
         }
-        
+        //its all good, do the do...
         if let imgData = UIImageJPEGRepresentation(img, 0.2){
             let imgUid = NSUUID().uuidString
             let metaData = FIRStorageMetadata()
@@ -73,12 +73,27 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
                 }else{
                     print("LUKE: Succesfully uploaded image to Firebase Storage")
                     let downloadURL = metadata?.downloadURL()?.absoluteString //converts url to raw string
+                    if let url = downloadURL {
+                        self.postToFirebase(imgUrl: url)
+                    }
                 }
             }
         }
     }
     
-    
+    func postToFirebase(imgUrl: String){
+        let post: Dictionary<String, Any> = [
+            "caption": captionTxtField.text!,
+            "imageUrl": imgUrl,
+            "likes": 0
+            ]
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionTxtField.text = ""
+        addImgView.image = #imageLiteral(resourceName: "add-image")
+        tableView.reloadData()
+    }
     
     
     
