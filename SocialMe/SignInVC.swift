@@ -53,7 +53,7 @@ class SignInVC: UIViewController {
             }else{
                 print("LUKE: Authenticated with Firebase")
                 if let user = user {
-                    let userData = ["provider": credential.provider]
+                    let userData = ["provider": credential.provider]///Here!!!
                     self.completeSignin(id: user.uid, userData: userData)
                 }
             }
@@ -88,7 +88,7 @@ class SignInVC: UIViewController {
     }
     
     func completeSignin(id: String, userData: Dictionary<String,String>){
-        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)///here!
         print("LUKE: \(id, userData)")
         KeychainWrapper.standard.set(id, forKey: KEY_UID)
         performSegue(withIdentifier: "ShowFeedVC", sender: nil)

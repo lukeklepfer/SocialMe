@@ -101,13 +101,16 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func addImageTapped(_ sender: Any) {
         present(imgPicker, animated: true, completion: nil)
     }
-    
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("LUKE: ID removed from keychain \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "ShowSignIn", sender: nil)
     }
+    @IBAction func profileImageTapped(_ sender: Any) {
+        performSegue(withIdentifier: "ShowProfileVC", sender: nil)
+    }
+    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

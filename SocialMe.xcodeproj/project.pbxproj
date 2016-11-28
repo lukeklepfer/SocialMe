@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD1A848A1DEA36E60039D687 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A84891DEA36E60039D687 /* DataService.swift */; };
 		AD1A848C1DEA4D980039D687 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A848B1DEA4D980039D687 /* Post.swift */; };
+		AD6ECBEF1DECBA4200120F25 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6ECBEE1DECBA4200120F25 /* ProfileVC.swift */; };
 		ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */; };
 		ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */; };
 		ADC7CB7D1DE8F77B00073582 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */; };
@@ -30,6 +31,7 @@
 		AB3BEF7BCB9E1DF1D01DEE74 /* Pods-SocialMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SocialMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-SocialMe/Pods-SocialMe.release.xcconfig"; sourceTree = "<group>"; };
 		AD1A84891DEA36E60039D687 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		AD1A848B1DEA4D980039D687 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		AD6ECBEE1DECBA4200120F25 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMe.entitlements; sourceTree = "<group>"; };
 		ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			children = (
 				ADE1729A1DE4F53E00437C21 /* SignInVC.swift */,
 				ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */,
+				AD6ECBEE1DECBA4200120F25 /* ProfileVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */,
 				AD1A848A1DEA36E60039D687 /* DataService.swift in Sources */,
 				ADE172B21DE507D200437C21 /* Constants.swift in Sources */,
+				AD6ECBEF1DECBA4200120F25 /* ProfileVC.swift in Sources */,
 				ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */,
 				ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */,
 				ADE172B51DE5097A00437C21 /* CustomButton.swift in Sources */,
