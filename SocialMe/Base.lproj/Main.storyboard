@@ -159,6 +159,9 @@
                                             <constraint firstAttribute="height" constant="50" id="ghd-2j-Rmj"/>
                                             <constraint firstAttribute="width" constant="50" id="hWz-8s-lts"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="nzW-9l-r1e" appends="YES" id="jz5-vF-fDf"/>
+                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGh-mH-3xe">
                                         <rect key="frame" x="137" y="15" width="100" height="50"/>
@@ -180,9 +183,6 @@
                                     <constraint firstAttribute="height" constant="65" id="miG-xU-JMM"/>
                                     <constraint firstAttribute="bottom" secondItem="clA-U9-fUz" secondAttribute="bottom" id="r7j-J1-NeO"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="4x5-tj-to0" appends="YES" id="fam-Zh-O66"/>
-                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGZ-84-N82" customClass="CustomView" customModule="SocialMe" customModuleProvider="target">
                                 <rect key="frame" x="8" y="73" width="359" height="65"/>
@@ -360,14 +360,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BuO-U6-inC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="4x5-tj-to0">
-                    <connections>
-                        <action selector="tappedSignOut:" destination="uVi-6f-Kt9" id="czu-tE-9S7"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="UFB-Hb-upc">
                     <connections>
                         <action selector="addImageTapped:" destination="uVi-6f-Kt9" id="yQ7-Dg-f4L"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="nzW-9l-r1e">
+                    <connections>
+                        <action selector="signOutTapped:" destination="uVi-6f-Kt9" id="XvL-xQ-ebd"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
