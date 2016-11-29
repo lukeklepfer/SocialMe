@@ -118,20 +118,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("LUKE: Cell Tapped")
-        let selectedCell = posts[indexPath.row]
-        performSegue(withIdentifier: "ShowProfileVC", sender: selectedCell)
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-//        if let destination = segue.destination as? ProfileVC {
-//            
-//            if let tappedPost = sender as? Post {
-//                
-//                destination.tappedPost = tappedPost
-//                
-//            }
-//        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

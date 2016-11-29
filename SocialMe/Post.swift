@@ -68,4 +68,16 @@ class Post {
         }
         _postRef.child("likes").setValue(_likes)
     }
+    
+//    func getUserByID(uid: String){
+//        let userRef = DataService.ds.REF_USERS.child(uid)
+//        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+//            if let _ = snapshot.value as? NSNull {
+//                print("User Id not found")
+//            }else{
+//                print(snapshot.value)
+//            }
+//            
+//        })
+//    }
 }

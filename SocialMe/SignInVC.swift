@@ -53,7 +53,7 @@ class SignInVC: UIViewController {
             }else{
                 print("LUKE: Authenticated with Firebase")
                 if let user = user {
-                    let userData = ["provider": credential.provider]///Here!!!
+                    let userData = ["provider": credential.provider, "profileImg": "https://firebasestorage.googleapis.com/v0/b/socialme-24e0c.appspot.com/o/profile-pics%2Fsgt-peppers-lonely-hearts-club-band.jpg?alt=media&token=98aa22a4-dd29-461d-a215-8d080215f36e"]///Here!!!
                     self.completeSignin(id: user.uid, userData: userData)
                 }
             }
@@ -67,7 +67,7 @@ class SignInVC: UIViewController {
                     //signed in!
                     print("LUKE: Email User Authenticated with Firebase")
                     if let user = user {
-                        let userData = ["provider": user.providerID]
+                        let userData = ["provider": user.providerID, "profileImg": "https://firebasestorage.googleapis.com/v0/b/socialme-24e0c.appspot.com/o/profile-pics%2Fsgt-peppers-lonely-hearts-club-band.jpg?alt=media&token=98aa22a4-dd29-461d-a215-8d080215f36e"]
                         self.completeSignin(id: user.uid, userData: userData)
                     }
                 }else{
@@ -77,7 +77,7 @@ class SignInVC: UIViewController {
                         }else{
                             print("LUKE: Email User Created")
                             if let user = user {
-                                let userData = ["provider": user.providerID]
+                                let userData = ["provider": user.providerID, "profileImg": "https://firebasestorage.googleapis.com/v0/b/socialme-24e0c.appspot.com/o/profile-pics%2Fsgt-peppers-lonely-hearts-club-band.jpg?alt=media&token=98aa22a4-dd29-461d-a215-8d080215f36e"]
                                 self.completeSignin(id: user.uid, userData: userData)
                             }
                         }
