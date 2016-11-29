@@ -24,6 +24,7 @@ class DataService {
     
     //Storage
     private var _REF_STOR_POST_PICS = STOR_BASE.child("post-pics")
+    private var _REF_STOR_PROFILE_PICS = STOR_BASE.child("profile-pics")
     
     var REF_USER_CURRENT: FIRDatabaseReference {
         let uid = KeychainWrapper.standard.string(forKey: KEY_UID) //keychain uid matches firebase uid
@@ -42,10 +43,16 @@ class DataService {
     var REF_STOR_POST_PICS: FIRStorageReference {
         return _REF_STOR_POST_PICS
     }
+    var REF_STOR_PROFILE_PICS: FIRStorageReference {
+        return _REF_STOR_PROFILE_PICS
+    }
+    
     
     
     func createFirebaseDBUser(uid: String, userData: Dictionary<String,String>) {
         REF_USERS.child(uid).updateChildValues(userData)//child might not exist, this will create one or add to it.
     }
+    
+    
     
 }

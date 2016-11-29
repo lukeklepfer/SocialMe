@@ -83,10 +83,12 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     
     func postToFirebase(imgUrl: String){
+        let user = ("\(DataService.ds.REF_USER_CURRENT)")
         let post: Dictionary<String, Any> = [
             "caption": captionTxtField.text!,
             "imageUrl": imgUrl,
-            "likes": 0
+            "likes": 0,
+            "poster": user
             ]
         let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
         firebasePost.setValue(post)
@@ -96,26 +98,42 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         tableView.reloadData()
      }
     
-    
-    
     @IBAction func addImageTapped(_ sender: Any) {
         present(imgPicker, animated: true, completion: nil)
     }
+    
+    
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("LUKE: ID removed from keychain \(keychainResult)")
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "ShowSignIn", sender: nil)
     }
+    
+    
     @IBAction func profileImageTapped(_ sender: Any) {
+        //edit their own profile
         performSegue(withIdentifier: "ShowProfileVC", sender: nil)
     }
-    
-    
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        print("LUKE: Cell Tapped")
+        let selectedCell = posts[indexPath.row]
+        performSegue(withIdentifier: "ShowProfileVC", sender: selectedCell)
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+//        if let destination = segue.destination as? ProfileVC {
+//            
+//            if let tappedPost = sender as? Post {
+//                
+//                destination.tappedPost = tappedPost
+//                
+//            }
+//        }
+    }
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let post = posts[indexPath.row]
@@ -138,5 +156,4 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }
-
 }
