@@ -38,7 +38,6 @@ class ProfileVC: UIViewController {
     }
 
     func settUpUI(){
-        let user = User(uid: (FIRAuth.auth()?.currentUser?.uid)!)
-        usernameTxtView.text = user.username
+        
     }
 }

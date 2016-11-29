@@ -31,8 +31,6 @@ class PostCell: UITableViewCell {
         tap.numberOfTapsRequired = 1
         likesImageView.isUserInteractionEnabled = true
         likesImageView.addGestureRecognizer(tap)
-        
-        
     }
 
     func configureCell(post: Post, img:UIImage? = nil){

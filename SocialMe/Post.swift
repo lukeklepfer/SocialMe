@@ -36,7 +36,6 @@ class Post {
     }
     
     init(caption: String, imgUrl: String, likes: Int) {
-        
         self._caption = caption
         self._imgUrl = imgUrl
         self._likes = likes

@@ -10,7 +10,6 @@
 		AD1A848A1DEA36E60039D687 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A84891DEA36E60039D687 /* DataService.swift */; };
 		AD1A848C1DEA4D980039D687 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A848B1DEA4D980039D687 /* Post.swift */; };
 		AD6ECBEF1DECBA4200120F25 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6ECBEE1DECBA4200120F25 /* ProfileVC.swift */; };
-		ADA959E11DEE038D00EE7DAB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA959E01DEE038D00EE7DAB /* User.swift */; };
 		ADC7CB7A1DE8F4C400073582 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */; };
 		ADC7CB7B1DE8F4C400073582 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */; };
 		ADC7CB7D1DE8F77B00073582 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */; };
@@ -34,7 +33,6 @@
 		AD1A848B1DEA4D980039D687 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		AD6ECBEE1DECBA4200120F25 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		ADA78A101DE6504D00676AD5 /* SocialMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SocialMe.entitlements; sourceTree = "<group>"; };
-		ADA959E01DEE038D00EE7DAB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ADC7CB781DE8F4C400073582 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		ADC7CB791DE8F4C400073582 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
 		ADC7CB7C1DE8F77B00073582 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				AD1A848B1DEA4D980039D687 /* Post.swift */,
-				ADA959E01DEE038D00EE7DAB /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -306,7 +303,6 @@
 				AD1A848C1DEA4D980039D687 /* Post.swift in Sources */,
 				ADE172B71DE50AD200437C21 /* CustomTextField.swift in Sources */,
 				ADE172991DE4F53E00437C21 /* AppDelegate.swift in Sources */,
-				ADA959E11DEE038D00EE7DAB /* User.swift in Sources */,
 				AD1A848A1DEA36E60039D687 /* DataService.swift in Sources */,
 				ADE172B21DE507D200437C21 /* Constants.swift in Sources */,
 				AD6ECBEF1DECBA4200120F25 /* ProfileVC.swift in Sources */,
